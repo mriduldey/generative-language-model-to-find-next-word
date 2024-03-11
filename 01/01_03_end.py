@@ -29,6 +29,7 @@ class MarkovChain:
         current = self._tokenize(prompt)[-1]
         # initialize the output
         output = prompt
+        
         for i in range(length):
             # look up the options in the graph dictionary
             options = self.graph.get(current, [])
